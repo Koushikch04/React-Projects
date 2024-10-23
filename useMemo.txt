@@ -1,0 +1,9 @@
+React.memo re-evaluates a component only when the prop values from the parent changes.
+But, if the prop value contains a function, then the child component re-executes as functions changes whenever the parent component state changes.
+
+useCallback can be used to store functions somewhere in the memory and no need to create them for every function execution
+
+so when we know that a function never changes, we can use the useCallback along with the React.memo.
+
+useMemo does the same as useCallback but for some part of code or certain data that need to be executed only when certain dependencies changes.
+ 

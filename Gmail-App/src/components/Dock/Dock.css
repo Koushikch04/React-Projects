@@ -1,0 +1,24 @@
+.dock-container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  height: 4rem;
+  align-items: flex-end;
+  gap: 1rem;
+  border-radius: 1rem;
+  background-color: #4a5568;
+  padding: 0 1rem;
+  padding-bottom: 0.75rem;
+}
+
+.app-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 9999px;
+  background-color: rgba(156, 163, 175, 1);
+}

@@ -1,0 +1,13 @@
+useEffect functions runs the last in a component(after all functions and code in the component completed running).
+for example if you are sending http requests you are getting from input data. If you run function in useEffect for every keystroke, you may send unneccessary network requests. So you can use cleanup function in useEffect.
+i.e we can send requests when user pauses for a certain amount of time.
+
+Cleanup function runs only from second useEffect function. 
+i.e. when component loads for first time, cleanup function do not run. It runs before 2nd use Effect function runs.i.e it runs before every subsequent useEffect function function starting from second one.
+
+If there are multiple useEffect functions, and every useEffect function is getting to run for the second time, all the cleanup functions run before the actual code in useEffect.
+
+
+It is safe way to set some state1 in useEffect, if the setState1 function depends on other states.
+
+i.e it ensures that the state1 is updated whenever the other state is changed

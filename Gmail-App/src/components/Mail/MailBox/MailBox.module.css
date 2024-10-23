@@ -1,0 +1,57 @@
+.options {
+  width: 3rem;
+  overflow: hidden;
+  padding: 10px;
+  transition: width 2s cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 2s cubic-bezier(0.65, 0, 0.35, 1);
+  border-bottom: 1px solid transparent;
+}
+
+.options.selected {
+  width: 16rem;
+}
+.options .title {
+  opacity: 0;
+  transition: opacity 2s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.options.selected .title {
+  opacity: 1;
+}
+
+.option {
+  width: 15rem;
+  padding: 0 12px 0 6px;
+  cursor: pointer;
+  display: flex;
+  color: #000;
+  font-family: SFUIText, Helvetica Neue, sans-serif;
+  letter-spacing: -1px;
+  height: 32px;
+}
+.option:hover {
+  border-radius: 10px;
+  background: #78788029;
+  transition: all 1s ease-in-out;
+}
+
+.option span.icon {
+  width: 30px;
+  height: 32px;
+  padding: 0;
+  margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option span.title {
+  flex: 1;
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  align-self: center;
+  overflow: hidden;
+  letter-spacing: 0.0125px;
+}

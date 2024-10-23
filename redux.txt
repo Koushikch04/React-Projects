@@ -1,0 +1,10 @@
+when a action is dispatched always return a new state, donot mutate the existing states in redux.
+
+In redux tool kit we can mutate the existing state, but behind the scenes redux tool kit manages and creates the new state in a immutable way
+
+Reducers in gerneral must be free from any side effects for the same input it should always produce the same output
+
+Redux can further be simplified if we have a backend node application, 
+where backend has the logic about the existing items and send the final status(state) of cart which we can directly send to reducer to just update the state to new one.
+
+Never change or mutate redux objects or variables in the state outside of the reducer functions

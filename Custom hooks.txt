@@ -1,0 +1,6 @@
+Custom Hooks allow you to extract complex logic into reusable functions that can be used across multiple components, promoting code reusability, maintainability, and readability.
+
+custom hooks can access all react hooks
+
+For each component that uses the custom hook, the useState, useEffect and other React hooks in the custom hook are tied to the component.
+This is done for all the components

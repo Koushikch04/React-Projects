@@ -1,0 +1,21 @@
+useReducer:- useState with more capabilities designed for more complex states.
+can be used where multiple states are managing things that are related.
+
+useState is not good to use in case where a state depends on two other states.
+for example for setting a new state1, if it depends on other state2 and in rare cases if react didnot update state2, state1 update is not correct.
+i.e if state2 update was not processed in time i.e before state1 processing.
+It is not correct
+here useReducer is useful.
+
+
+In simple, if you update a state which depends on other state then merging them into one state is useful. you can do with single state containing variables of both states.But it can be complex, useReducer can be useful.
+
+
+But if you in worst case need to update a state1 based on other state2, do the update in useEffect where you update state1 only if the state2 value is changes
+
+
+The context provider is responsible for creating and managing the global state
+
+using useReducer and useState in the context(provider), whenever the any change happened to the state in context, whole components that are effected by the context are re-evaluated
+
+React Schedules  the state updates, so the code right next to the setState executes before the component re-executes
